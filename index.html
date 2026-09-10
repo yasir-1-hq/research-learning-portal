@@ -477,3 +477,50 @@ if ("serviceWorker" in navigator) {
 </script>
 </body>
 </html>
+
+<style>
+#installAppBtn {
+  display: none;
+  margin: 15px auto;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 10px;
+  background: #0b1f3a;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+</style>
+
+<button id="installAppBtn">📲 Install Research Portal App</button>
+
+<script>
+let deferredPrompt;
+const installBtn = document.getElementById("installAppBtn");
+
+window.addEventListener("beforeinstallprompt", (event) => {
+  event.preventDefault();
+  deferredPrompt = event;
+  installBtn.style.display = "block";
+});
+
+installBtn.addEventListener("click", async () => {
+  if (!deferredPrompt) return;
+
+  deferredPrompt.prompt();
+
+  const result = await deferredPrompt.userChoice;
+
+  if (result.outcome === "accepted") {
+    installBtn.style.display = "none";
+  }
+
+  deferredPrompt = null;
+});
+
+window.addEventListener("appinstalled", () => {
+  installBtn.style.display = "none";
+});
+</script>
+

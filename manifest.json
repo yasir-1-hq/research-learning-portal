@@ -1,8 +1,9 @@
 {
   "name": "Research Learning Portal",
   "short_name": "Research Portal",
-  "description": "Research learning and article publishing guide for university students",
+  "description": "Student Research & Article Publishing Guide",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#0b1f3a",
@@ -11,12 +12,14 @@
     {
       "src": "/icon-192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "/icon-512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
