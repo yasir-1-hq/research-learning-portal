@@ -7,6 +7,9 @@
 <meta name="theme-color" content="#0f172a">
 <title>Research Learning Portal</title>
 <link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0b1f3a">
+<link rel="icon" type="image/png" href="logo.png">
 </head>
 
 <body>
@@ -465,5 +468,12 @@ function showTemplate(type){
 
 </script>
 
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/sw.js");
+  });
+}
+</script>
 </body>
 </html>
