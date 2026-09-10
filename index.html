@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Research Learning Portal - Student Research and Article Publishing Guide">
+<meta name="theme-color" content="#0f172a">
+<title>Research Learning Portal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="brand">
+        <div class="logo">R</div>
+        <div>
+            <strong>Research Learning Portal</strong>
+            <small>Student Research & Article Publishing Guide</small>
+        </div>
+    </div>
+
+    <button class="menu-button" onclick="toggleMenu()">☰</button>
+</header>
+
+<nav id="mainMenu" class="main-menu">
+    <a href="#" onclick="showPage('home');return false;">🏠 Home</a>
+    <a href="#" onclick="showPage('journey');return false;">🧭 Research Journey</a>
+    <a href="#" onclick="showPage('modules');return false;">📚 Learning Modules</a>
+    <a href="#" onclick="showPage('example');return false;">🔬 Example Project</a>
+    <a href="#" onclick="showPage('checklist');return false;">✅ Student Checklist</a>
+    <a href="#" onclick="showPage('templates');return false;">📄 Templates</a>
+</nav>
+
+
+<main>
+
+<!-- HOME -->
+<section id="home" class="page active-page">
+
+    <div class="hero">
+        <span class="section-label">STUDENT RESEARCH GUIDE</span>
+        <h1>Learn Research<br><span>From A to Z</span></h1>
+
+        <p>
+            A practical step-by-step portal for university students to plan research,
+            collect and analyze data, write an article, select a journal,
+            submit, revise and publish.
+        </p>
+
+        <button class="primary-btn" onclick="showPage('journey')">
+            Start Your Research →
+        </button>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <strong>35</strong>
+            <span>Research Steps</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>10</strong>
+            <span>Learning Modules</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>6</strong>
+            <span>Student Templates</span>
+        </div>
+    </div>
+
+    <div class="home-section">
+        <span class="section-label">HOW IT WORKS</span>
+        <h2>Your Complete Research Journey</h2>
+        <p>
+            Follow the research process step by step — from choosing a topic
+            to publication and university record.
+        </p>
+
+        <div class="mini-journey">
+            <div>01<br><b>Choose Topic</b></div>
+            <div>02<br><b>Supervisor</b></div>
+            <div>03<br><b>Proposal</b></div>
+            <div>04<br><b>Literature</b></div>
+            <div>05<br><b>Methodology</b></div>
+            <div>06<br><b>Data</b></div>
+            <div>07<br><b>Article</b></div>
+            <div>08<br><b>Journal</b></div>
+            <div>09<br><b>Review</b></div>
+            <div>10<br><b>Publication</b></div>
+        </div>
+    </div>
+
+    <div class="cta-box">
+        <h2>Ready to Start Your Research?</h2>
+        <p>Open the Research Journey and learn every stage.</p>
+        <button class="primary-btn" onclick="showPage('journey')">
+            View Research Journey →
+        </button>
+    </div>
+
+</section>
+
+
+<!-- RESEARCH JOURNEY -->
+<section id="journey" class="page">
+
+    <div class="page-heading">
+        <span class="section-label">RESEARCH APP</span>
+        <h1>Research Steps Dashboard</h1>
+        <p>
+            Follow all 35 steps from research topic to publication.
+            Open any step to learn the complete process.
+        </p>
+    </div>
+
+    <div class="progress-box">
+        <div class="progress-title">
+            <strong>Your Research Progress</strong>
+            <span id="progressText">0 / 35 — 0%</span>
+        </div>
+
+        <div class="progress-bar">
+            <div id="progressFill"></div>
+        </div>
+    </div>
+
+    <input
+        type="search"
+        id="searchBox"
+        class="search-box"
+        placeholder="🔎 Search research step..."
+    >
+
+    <div id="stepList" class="app-step-list"></div>
+
+</section>
+
+
+<!-- MODULES -->
+<section id="modules" class="page">
+
+    <div class="page-heading">
+        <span class="section-label">LEARNING MODULES</span>
+        <h1>Research Skills You Will Learn</h1>
+        <p>Build the skills needed for successful academic research.</p>
+    </div>
+
+    <div class="module-grid">
+
+        <div class="module-card">
+            <span>📚</span>
+            <h3>Literature Review</h3>
+            <p>Search previous studies, identify gaps and write a strong literature review.</p>
+        </div>
+
+        <div class="module-card">
+            <span>🔬</span>
+            <h3>Research Methodology</h3>
+            <p>Understand qualitative, quantitative and mixed-method approaches.</p>
+        </div>
+
+        <div class="module-card">
+            <span>📊</span>
+            <h3>Data & Analysis</h3>
+            <p>Learn data collection, transcription, coding, themes and interpretation.</p>
+        </div>
+
+        <div class="module-card">
+            <span>✍️</span>
+            <h3>Academic Writing</h3>
+            <p>Learn introduction, methodology, findings, discussion and conclusion.</p>
+        </div>
+
+        <div class="module-card">
+            <span>📖</span>
+            <h3>Citation & APA</h3>
+            <p>Learn in-text citations, references and APA referencing.</p>
+        </div>
+
+        <div class="module-card">
+            <span>🛡️</span>
+            <h3>Academic Integrity</h3>
+            <p>Understand plagiarism, ethics, citation and research data integrity.</p>
+        </div>
+
+        <div class="module-card">
+            <span>📰</span>
+            <h3>Journal Selection</h3>
+            <p>Learn how to check journal scope, peer review, indexing and guidelines.</p>
+        </div>
+
+        <div class="module-card">
+            <span>📤</span>
+            <h3>Article Submission</h3>
+            <p>Learn manuscript preparation, cover letters and online submission.</p>
+        </div>
+
+        <div class="module-card">
+            <span>👨‍⚖️</span>
+            <h3>Peer Review</h3>
+            <p>Understand reviewer comments, revisions and response letters.</p>
+        </div>
+
+        <div class="module-card">
+            <span>🏆</span>
+            <h3>Publication</h3>
+            <p>Learn what happens after acceptance, including proofing and DOI.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EXAMPLE -->
+<section id="example" class="page">
+
+    <div class="page-heading">
+        <span class="section-label">EXAMPLE RESEARCH PROJECT</span>
+        <h1>Between Two Nations</h1>
+
+        <p class="project-title">
+            Identity Crisis Among Afghan Refugees Born in Pakistan
+        </p>
+
+        <p>
+            A Qualitative Study in Kohat, Khyber Pakhtunkhwa, Pakistan
+        </p>
+    </div>
+
+    <div class="research-flow">
+
+        <div>Research Topic</div>
+        <span>↓</span>
+        <div>Research Questions</div>
+        <span>↓</span>
+        <div>Qualitative Approach</div>
+        <span>↓</span>
+        <div>Interviews</div>
+        <span>↓</span>
+        <div>Transcription</div>
+        <span>↓</span>
+        <div>Coding</div>
+        <span>↓</span>
+        <div>Themes</div>
+        <span>↓</span>
+        <div>Findings</div>
+        <span>↓</span>
+        <div>Discussion</div>
+        <span>↓</span>
+        <div>Conclusion</div>
+
+    </div>
+
+    <div class="warning-box">
+        <strong>⚠️ Academic Integrity</strong>
+        <p>
+            This is an educational example. Actual participants, interviews,
+            quotations, themes and findings must come from real approved research data.
+            Never fabricate research data.
+        </p>
+    </div>
+
+</section>
+
+
+<!-- CHECKLIST -->
+<section id="checklist" class="page">
+
+    <div class="page-heading">
+        <span class="section-label">STUDENT CHECKLIST</span>
+        <h1>Track Your Research Progress</h1>
+        <p>Tick each item when your work is completed.</p>
+    </div>
+
+    <div class="checklist-card">
+
+        <label><input type="checkbox"> Research topic finalized</label>
+        <label><input type="checkbox"> Supervisor approval completed</label>
+        <label><input type="checkbox"> Research proposal completed</label>
+        <label><input type="checkbox"> Literature review completed</label>
+        <label><input type="checkbox"> Research methodology completed</label>
+        <label><input type="checkbox"> Ethical approval completed</label>
+        <label><input type="checkbox"> Data collection completed</label>
+        <label><input type="checkbox"> Data analysis completed</label>
+        <label><input type="checkbox"> Research article completed</label>
+        <label><input type="checkbox"> Journal selected</label>
+        <label><input type="checkbox"> Article submitted</label>
+        <label><input type="checkbox"> Reviewer revisions completed</label>
+        <label><input type="checkbox"> Article accepted</label>
+        <label><input type="checkbox"> Article published</label>
+
+    </div>
+
+</section>
+
+
+<!-- TEMPLATES -->
+<section id="templates" class="page">
+
+    <div class="page-heading">
+        <span class="section-label">STUDENT TEMPLATES</span>
+        <h1>Research Templates</h1>
+        <p>Useful academic templates for students.</p>
+    </div>
+
+    <div class="template-grid">
+
+        <div class="template-card">
+            <span>📄</span>
+            <h3>Research Proposal</h3>
+            <p>Basic structure of a research proposal.</p>
+            <button onclick="showTemplate('proposal')">View Template</button>
+        </div>
+
+        <div class="template-card">
+            <span>🎤</span>
+            <h3>Interview Guide</h3>
+            <p>Basic semi-structured interview guide.</p>
+            <button onclick="showTemplate('interview')">View Template</button>
+        </div>
+
+        <div class="template-card">
+            <span>📝</span>
+            <h3>Consent Form</h3>
+            <p>Basic structure of informed consent.</p>
+            <button onclick="showTemplate('consent')">View Template</button>
+        </div>
+
+        <div class="template-card">
+            <span>✉️</span>
+            <h3>Cover Letter</h3>
+            <p>Basic journal submission cover letter.</p>
+            <button onclick="showTemplate('cover')">View Template</button>
+        </div>
+
+        <div class="template-card">
+            <span>👨‍⚖️</span>
+            <h3>Reviewer Response</h3>
+            <p>Point-by-point response structure.</p>
+            <button onclick="showTemplate('review')">View Template</button>
+        </div>
+
+        <div class="template-card">
+            <span>📚</span>
+            <h3>APA 7</h3>
+            <p>Common APA 7 citation formats.</p>
+            <button onclick="showTemplate('apa')">View Template</button>
+        </div>
+
+    </div>
+
+    <div id="templateOutput" class="template-output"></div>
+
+</section>
+
+</main>
+
+
+<footer>
+    <strong>Research Learning Portal</strong>
+    <p>A student-focused guide for research and academic publishing.</p>
+    <span>Research • Writing • Publishing</span>
+    <br><br>
+    © 2026 Research Learning Portal
+</footer>
+
+
+<script src="app.js"></script>
+
+<script>
+
+function toggleMenu(){
+    document.getElementById("mainMenu").classList.toggle("menu-open");
+}
+
+function showPage(page){
+
+    document.querySelectorAll(".page").forEach(function(section){
+        section.classList.remove("active-page");
+    });
+
+    const target = document.getElementById(page);
+
+    if(target){
+        target.classList.add("active-page");
+        window.scrollTo({top:0, behavior:"smooth"});
+    }
+
+    document.getElementById("mainMenu").classList.remove("menu-open");
+}
+
+
+function showTemplate(type){
+
+    const output = document.getElementById("templateOutput");
+
+    const templates = {
+
+        proposal: `
+        <h2>📄 Research Proposal Template</h2>
+        <ol>
+            <li>Title</li>
+            <li>Introduction / Background</li>
+            <li>Research Problem</li>
+            <li>Research Questions</li>
+            <li>Research Objectives</li>
+            <li>Literature Review</li>
+            <li>Research Gap</li>
+            <li>Theoretical Framework</li>
+            <li>Methodology</li>
+            <li>Ethical Considerations</li>
+            <li>Expected Contribution</li>
+            <li>References</li>
+        </ol>`,
+
+        interview: `
+        <h2>🎤 Interview Guide Template</h2>
+        <p><strong>Opening:</strong> Introduce yourself and explain the study.</p>
+        <p><strong>Question 1:</strong> Please tell me about your experience.</p>
+        <p><strong>Question 2:</strong> How do you understand your identity?</p>
+        <p><strong>Question 3:</strong> What factors influence your sense of belonging?</p>
+        <p><strong>Question 4:</strong> Have your experiences affected your identity?</p>
+        <p><strong>Closing:</strong> Is there anything else you would like to add?</p>`,
+
+        consent: `
+        <h2>📝 Informed Consent Template</h2>
+        <p><strong>Study Title:</strong> __________________</p>
+        <p>I understand the purpose of this research and what my participation involves.</p>
+        <p>I understand that participation is voluntary and that I may withdraw according to the study rules.</p>
+        <p>I understand how my information will be protected.</p>
+        <p><strong>Participant Name:</strong> __________________</p>
+        <p><strong>Signature:</strong> __________________</p>`,
+
+        cover: `
+        <h2>✉️ Journal Cover Letter Template</h2>
+        <p>Dear Editor,</p>
+        <p>We are pleased to submit our manuscript entitled
+        <strong>“[Article Title]”</strong> for consideration in your journal.</p>
+        <p>The manuscript addresses [brief contribution]. We believe it fits the scope of the journal because [reason].</p>
+        <p>The manuscript is original and has been prepared according to the journal's requirements.</p>
+        <p>Sincerely,<br>[Author Name]</p>`,
+
+        review: `
+        <h2>👨‍⚖️ Reviewer Response Template</h2>
+        <p><strong>Reviewer Comment 1:</strong></p>
+        <p>[Insert reviewer comment]</p>
+        <p><strong>Response:</strong></p>
+        <p>Thank you for this valuable comment. We have revised the manuscript by [describe change].</p>
+        <p><strong>Location of Change:</strong> Page ___, Line ___</p>`,
+
+        apa: `
+        <h2>📚 APA 7 Quick Guide</h2>
+        <p><strong>Book:</strong> Author, A. A. (Year). <em>Title of book</em>. Publisher.</p>
+        <p><strong>Journal Article:</strong> Author, A. A. (Year). Title of article. <em>Journal Name, volume</em>(issue), pages.</p>
+        <p><strong>In-text:</strong> (Author, Year)</p>
+        <p><strong>Two authors:</strong> (Author & Author, Year)</p>`
+    };
+
+    output.innerHTML = templates[type] || "";
+    output.scrollIntoView({behavior:"smooth"});
+}
+
+</script>
+
+</body>
+</html>
